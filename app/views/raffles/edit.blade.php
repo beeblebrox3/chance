@@ -11,9 +11,9 @@
     {{ Sysfeedback::render('<div class="message :type">:message</div>') }}
 
     @if(isset($data))
-        {{ Form::model($data, array('route' => array('Raffles.update', $data->id), 'method' => 'put', 'class' => 'uk-form uk-form-stacked uk-width-1-2')) }}
+        {{ Form::model($data, array('route' => array('Raffles.update', $data->id), 'method' => 'put', 'class' => 'uk-form uk-form-stacked uk-form-width-large')) }}
     @else
-        {{ Form::open(array('route' => 'Raffles.store', 'method' => 'post','class' => 'uk-form uk-form-stacked uk-width-1-2')) }}
+        {{ Form::open(array('route' => 'Raffles.store', 'method' => 'post','class' => 'uk-form uk-form-stacked uk-form-width-large')) }}
     @endif
 
         <fieldset>
@@ -36,9 +36,18 @@
             <div class="uk-form-row">
                 <label for="limit_date" class="uk-form-label">{{ Lang::get('fields.limit_date') }}</label>
                 <div class="uk-form-controls">
-                    {{ Form::input('text', 'limit_date', null, array('id' =>'limit_date', 'maxlength' => 10, 'data-uk-datepicker'=>'{format:\'DD-MM-YYYY\'}', 'class' => 'uk-form-width-medium ' . ($errors->has('limit_date') ? 'uk-form-danger' : ''))) }}
-                    {{ Form::input('text', 'limit_time', null, array('maxlength' => 5, 'data-uk-timepicker'=>'{format:\'24h\'}', 'class' => 'uk-form-width-medium ' . ($errors->has('limit_date') ? 'uk-form-danger' : ''))) }}
+                    {{ Form::input('text', 'limit_date', null, array('id' =>'limit_date', 'maxlength' => 10, 'data-uk-datepicker'=>'{format:\'DD-MM-YYYY\'}', 'class' => 'uk-form-width-large ' . ($errors->has('limit_date') ? 'uk-form-danger' : ''))) }}
                 </div>
+                    
+                {{ $errors->first('limit_date','<div class="uk-text-danger">:message</div>') }}
+            </div>
+            
+            <div class="uk-form-row">
+                <label for="limit_date" class="uk-form-label">{{ Lang::get('fields.limit_time') }}</label>
+                <div class="uk-form-controls">
+                    {{ Form::input('text', 'limit_time', null, array('maxlength' => 5, 'data-uk-timepicker'=>'{format:\'24h\'}', 'class' => 'uk-form-width-large ' . ($errors->has('limit_date') ? 'uk-form-danger' : ''))) }}
+                </div>
+                    
                 {{ $errors->first('limit_date','<div class="uk-text-danger">:message</div>') }}
             </div>
             

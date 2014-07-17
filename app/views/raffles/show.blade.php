@@ -32,7 +32,7 @@
 
         <span class="uk-button" data-label="{{ Lang::get('messages.confirm_redo_raffle') }}" data-confirm="{{ route('Raffles.redoRandomlySelect', $data->id) }}" data-method="put">{{ Lang::get('actions.redoRaffle') }}</span>
     @else
-        <span class="uk-button uk-button-success" data-label="{{ Lang::get('messages.confirm_do_raffle') }}" data-confirm="{{ route('Raffles.randomlySelect', $data->id) }}">{{ Lang::get('actions.doRaffle') }}</span>
+        <span class="uk-button uk-button-success pointer" data-label="{{ Lang::get('messages.confirm_do_raffle') }}" data-confirm="{{ route('Raffles.randomlySelect', $data->id) }}">{{ Lang::get('actions.doRaffle') }}</span>
     @endif
 
 

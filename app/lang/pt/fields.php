@@ -7,6 +7,7 @@ return array (
     'name' => 'Nome',
     'slug' => 'Slug',
     'limit_date' => 'Data limite',
+    'limit_time' => 'Hora limite',
     'participants' => 'Participantes',
     'created_at' => 'Data de criação',
     'description' => 'Descrição',

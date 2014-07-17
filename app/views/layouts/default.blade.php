@@ -3,8 +3,8 @@
     <head>
         <title>@yield('pageTitle')</title>
         <meta charset="utf-8" />
-        {{ HTML::style('css/vendor/uikit.min.css') }}
-        {{ HTML::style('css/vendor/addons/uikit.addons.min.css') }}
+        {{ HTML::style('libs/uikit/css/uikit.min.css') }}
+        {{ HTML::style('libs/uikit/css/addons/uikit.addons.min.css') }}
         {{ HTML::style('css/style.css') }}
     </head>
     <body>
@@ -15,11 +15,11 @@
 
 
         {{ HTML::script('bower_components/jquery/dist/jquery.min.js') }}
-        {{ HTML::script('js/vendor/uikit.min.js') }}
-        {{ HTML::script('js/vendor/addons/form-password.min.js') }}
-        {{ HTML::script('js/vendor/addons/datepicker.min.js') }}
-        {{ HTML::script('js/vendor/addons/autocomplete.min.js') }}
-        {{ HTML::script('js/vendor/addons/timepicker.min.js') }}
+        {{ HTML::script('libs/uikit/js/uikit.min.js') }}
+        {{ HTML::script('libs/uikit/js/addons/form-password.min.js') }}
+        {{ HTML::script('libs/uikit/js/addons/datepicker.min.js') }}
+        {{ HTML::script('libs/uikit/js/addons/autocomplete.min.js') }}
+        {{ HTML::script('libs/uikit/js/addons/timepicker.min.js') }}
         {{ HTML::script('js/app.js') }}
     </body>
 </html>

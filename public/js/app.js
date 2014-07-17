@@ -71,31 +71,31 @@ $(function () {
         }
     });
 
-    $('.apply-datepicker').each(function () {
-        var $this = $(this),
-            format = $this.attr('data-format'),
-            locale = $this.attr('data-locale'),
-            defaultValue = $this.attr('data-default'),
-            t = null,
-            val = $this.val();
-
-        if (format === undefined) {
-            format = 'YYYY-MM-DD hh:mm';
-        }
-
-        if (locale === undefined) {
-            locale = 'br';
-        }
-
-        $this.appendDtpicker({
-            "autodateOnStart": false,
-            locale: locale,
-            dateFormat: format
-        });
-
-        // gambiarra!!
-        if (val.length > 16) {
-            $this.val(val.substr(0,16));
-        }
-    });
+//    $('.apply-datepicker').each(function () {
+//        var $this = $(this),
+//            format = $this.attr('data-format'),
+//            locale = $this.attr('data-locale'),
+//            defaultValue = $this.attr('data-default'),
+//            t = null,
+//            val = $this.val();
+//
+//        if (format === undefined) {
+//            format = 'YYYY-MM-DD hh:mm';
+//        }
+//
+//        if (locale === undefined) {
+//            locale = 'br';
+//        }
+//
+//        $this.appendDtpicker({
+//            "autodateOnStart": false,
+//            locale: locale,
+//            dateFormat: format
+//        });
+//
+//        // gambiarra!!
+//        if (val.length > 16) {
+//            $this.val(val.substr(0,16));
+//        }
+//    });
 });
