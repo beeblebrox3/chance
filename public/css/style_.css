@@ -1,0 +1,116 @@
+body * {
+    box-sizing: border-box;
+}
+a, a:visited,
+.fake-link,
+.fake-link:visited {
+    color: #0069FF;
+    padding: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover,
+a:active,
+.fake-link:hover,
+.fake-link:active {
+    background: #0069FF;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+}
+.hidden {
+    display: none;
+}
+.box-login {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+    padding: 40px;
+}
+    .box-login input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-control input,
+    .form-control textarea,
+    .form-control select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+.form-control.error {
+    color: red;
+}
+
+.form-control.error input[type="text"],
+.form-control.error input[type="number"],
+.form-control.error input[type="email"],
+.form-control.error input[type="search"],
+.form-control.error input[type="password"],
+.form-control.error input[type="datetime"] {
+    border-color: red;
+    background-color: rgba(255,0,0,0.01);
+}
+
+.message.error {
+    color: red;
+}
+.message.success {
+    color: green;
+}
+
+
+.main-nav {
+    width: 100%;
+    display: block;
+    background: #222;
+    line-height: 30px;
+    padding: 0 20px;
+}
+    .main-nav ul {
+        margin: 0;
+    }
+    .main-nav li {
+        margin: 0;
+        display: inline-block;
+    }
+    .main-nav a {
+        color: white;
+        line-height: 40px;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    .main-nav a:hover,
+    .main-nav a.active {
+        background: black;
+    }
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+table thead {
+    background: #f2f2f2;
+}
+table th {
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tbody tr {
+    background: background: #fafafa;;
+}
+table tbody tr:nth-child(odd) {
+    background: white;
+}

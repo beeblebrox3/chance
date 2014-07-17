@@ -5,9 +5,9 @@
 
     {{ Sysfeedback::render('<div class="message :type">:message</div>') }}
 
-    {{ HTML::link(route('Raffles.create'), Lang::get('actions.create')) }}
+    {{ HTML::link(route('Raffles.create'), Lang::get('actions.create'),['class'=>'uk-button uk-button-primary']) }}
 
-    <table>
+    <table class="uk-table uk-table-striped uk-table-hover">
         <thead>
             <tr>
                 <th>{{ Lang::get('fields.id') }}</th>
@@ -34,7 +34,7 @@
                 <td>{{ $piece->created_at }}</td>
                 <td>
                     {{ HTML::link(route('Raffles.edit', $piece->id), Lang::get('actions.edit')) }}
-                    <span class="fake-link" data-delete="{{ route('Raffles.destroy', $piece->id) }}">{{ Lang::get('actions.delete') }}</span>
+                    <span class="uk-button-link pointer" data-delete="{{ route('Raffles.destroy', $piece->id) }}">{{ Lang::get('actions.delete') }}</span>
 
                 </td>
             </tr>
