@@ -28,6 +28,7 @@ class Raffles extends AbstractController
 
     public function store()
     {
+        //@todo Novo datepicker separou hora e data
         $raffle = $this->model();
         $raffle->fill(\Input::all());
 
@@ -115,6 +116,7 @@ class Raffles extends AbstractController
         return \Redirect::route('Raffles.show', $raffle_id);
     }
 
+    //@todo sortear sem participantes da erro
     public function randomlySelect($raffle_id)
     {
         $raffle = $this->model()->with('raffleWinners')->find($raffle_id);

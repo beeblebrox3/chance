@@ -17,8 +17,9 @@ class Users extends AbstractController
         if (\Auth::attempt($credentials)) {
             return \Redirect::intended(route('Home'));
         }
-
+        //@todo :type nao esta sendo substituido
         \Sysfeedback::error(\Lang::get('messages.invalid_credentials'));
+        //@todo Erros não chegam na view
         return \Redirect::route('Auth.login')->withInput();
     }
 

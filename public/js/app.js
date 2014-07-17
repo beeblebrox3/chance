@@ -83,8 +83,6 @@ $(function () {
             format = 'YYYY-MM-DD hh:mm';
         }
 
-        console.log(format);
-
         if (locale === undefined) {
             locale = 'br';
         }

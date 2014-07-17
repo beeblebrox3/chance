@@ -9,7 +9,7 @@
     @if (count($data->raffleWinners))
         <h2>{{ Lang::get('fields.winners') }}</h2>
 
-        <table>
+        <table class="uk-table uk-table-striped uk-table-hover">
             <thead>
                 <tr>
                     <th>#</th>
@@ -30,17 +30,17 @@
             </tbody>
         </table>
 
-        <span class="fake-link" data-label="{{ Lang::get('messages.confirm_redo_raffle') }}" data-confirm="{{ route('Raffles.redoRandomlySelect', $data->id) }}" data-method="put">{{ Lang::get('actions.redoRaffle') }}</span>
+        <span class="uk-button" data-label="{{ Lang::get('messages.confirm_redo_raffle') }}" data-confirm="{{ route('Raffles.redoRandomlySelect', $data->id) }}" data-method="put">{{ Lang::get('actions.redoRaffle') }}</span>
     @else
-        <span class="fake-link" data-label="{{ Lang::get('messages.confirm_do_raffle') }}" data-confirm="{{ route('Raffles.randomlySelect', $data->id) }}">{{ Lang::get('actions.doRaffle') }}</span>
+        <span class="uk-button uk-button-success" data-label="{{ Lang::get('messages.confirm_do_raffle') }}" data-confirm="{{ route('Raffles.randomlySelect', $data->id) }}">{{ Lang::get('actions.doRaffle') }}</span>
     @endif
 
 
     <h2>{{ Lang::get('fields.participants') }}</h2>
 
-    {{ HTML::link(route('Raffles.join', $data->slug), Lang::get('actions.create'), array('target' => '_blank')) }}
+    {{ HTML::link(route('Raffles.join', $data->slug), Lang::get('actions.create'), array('target' => '_blank', 'class'=>'uk-button uk-button-primary')) }}
 
-    <table>
+    <table class="uk-table uk-table-striped uk-table-hover">
         <thead>
             <tr>
                 <th>#</th>
@@ -56,12 +56,12 @@
                     <td>{{ $participant->name }}</td>
                     <td>{{ $participant->email }}</td>
                     <td>
-                        <span class="fake-link" data-delete="{{ route('Raffles.unjoin', array($data->id, $participant->id)) }}">{{ Lang::get('actions.delete') }}</span>
+                        <span class="uk-button-link pointer" data-delete="{{ route('Raffles.unjoin', array($data->id, $participant->id)) }}">{{ Lang::get('actions.delete') }}</span>
                     </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
 
-    {{ HTML::link(route('Raffles.join', $data->slug), Lang::get('actions.create'), array('target' => '_blank')) }}
+    {{ HTML::link(route('Raffles.join', $data->slug), Lang::get('actions.create'), array('target' => '_blank', 'class'=>'uk-button uk-button-primary')) }}
 @stop
